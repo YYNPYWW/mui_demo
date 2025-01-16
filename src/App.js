@@ -4,14 +4,19 @@
 
 // 可组合导入
 import { Button, createTheme, Stack, ThemeProvider, Typography } from '@mui/material';
+import { blue, purple, red } from '@mui/material/colors';
 
-import logo from './logo.svg';
 import './App.css';
 
 const paletteTheme = createTheme({
   palette: {
     primary: {
       main: '#ba68c8'
+    },
+    customizable: {
+      main: "#4a148c",
+      light: "#e57373",
+      dark: "#0d47a1"
     },
     background: {
       paper: 'black'
@@ -20,7 +25,7 @@ const paletteTheme = createTheme({
   typography: {
     h0: {
       fontWeight: 500,
-      fontSize: '5rem'
+      fontSize: '5rem',      
     }
   }
 })
@@ -30,7 +35,6 @@ function App() {
     <ThemeProvider theme={paletteTheme}>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <Stack spacing={2} direction="row">
             <Button
               variant="text"
@@ -42,8 +46,8 @@ function App() {
             </Button>
             <Button
               variant="contained"
+              color='customizable'
               sx={{
-                color: 'orange',
                 fontWeight: 700
               }}
             >
@@ -52,6 +56,7 @@ function App() {
             <Button
               variant="outlined"
               sx={{
+                bgcolor: 'customizable.dark',
                 border: '2px solid'
               }}
             >
@@ -62,9 +67,10 @@ function App() {
             variant='h0'
             sx={{
               m: 2,
+              color: 'customizable.light',
             }}
           >
-            什么才叫满意？
+            为什么颜色不生效？
           </Typography>
         </header>
       </div>
