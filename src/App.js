@@ -3,7 +3,7 @@
 // import Button from '@mui/material/Button';
 
 // 可组合导入
-import { Button, createTheme, Stack, ThemeProvider } from '@mui/material';
+import { Button, createTheme, Stack, ThemeProvider, Typography } from '@mui/material';
 
 import logo from './logo.svg';
 import './App.css';
@@ -17,6 +17,12 @@ const paletteTheme = createTheme({
       paper: 'black'
     }
   },
+  typography: {
+    h0: {
+      fontWeight: 500,
+      fontSize: '5rem'
+    }
+  }
 })
 
 function App() {
@@ -52,6 +58,14 @@ function App() {
               Outlined
             </Button>
           </Stack>
+          <Typography
+            variant='h0'
+            sx={{
+              m: 2,
+            }}
+          >
+            什么才叫满意？
+          </Typography>
         </header>
       </div>
     </ThemeProvider>
