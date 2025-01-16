@@ -5,6 +5,7 @@
 // 可组合导入
 import { Button, createTheme, Stack, ThemeProvider, Typography } from '@mui/material';
 import { blue, purple, red } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
 
 import './App.css';
 
@@ -25,10 +26,15 @@ const paletteTheme = createTheme({
   typography: {
     h0: {
       fontWeight: 500,
-      fontSize: '5rem',      
+      fontSize: '5rem',
     }
   }
 })
+
+const MyComponent = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.customizable.light,
+  fontWeight: 700
+}))
 
 function App() {
   return (
@@ -62,6 +68,11 @@ function App() {
             >
               Outlined
             </Button>
+            <MyComponent
+              variant="contained"
+            >
+              Customizable
+            </MyComponent>
           </Stack>
           <Typography
             variant='h0'
