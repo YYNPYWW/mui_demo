@@ -7,8 +7,6 @@ import { Button, createTheme, Stack, ThemeProvider, Typography } from '@mui/mate
 import { blue, purple, red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 
-import './App.css';
-
 const paletteTheme = createTheme({
   palette: {
     primary: {
@@ -35,6 +33,11 @@ const MyComponent = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.customizable.light,
   fontWeight: 700
 }))
+
+// const MyComponent = styled(Button)({
+//   backgroundColor: '#e57373',
+//   fontWeight: 700
+// })
 
 function App() {
   return (
