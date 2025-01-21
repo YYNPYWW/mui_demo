@@ -10,8 +10,8 @@ import theme from './theme.js';
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <NavBar />
       <Stack direction='row' spacing={2} >
-        {/* <NavBar /> */}
         <SideBar />
         <Footer />
         <RightBar />
