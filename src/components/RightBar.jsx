@@ -6,12 +6,17 @@ const RightBar = () => {
         <Box
             flex={1}
             sx={{
-                bgcolor: '#ed6c02',
                 p: 2,
                 display: { xs: 'none', sm: 'block' }
             }}
         >
-            RightBar
+            <Box
+            sx={{
+                position: 'fixed'
+            }}
+            >
+                hhh
+            </Box>
         </Box>
     )
 }
