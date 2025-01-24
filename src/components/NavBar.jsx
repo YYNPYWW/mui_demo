@@ -11,7 +11,7 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: 'white',
     borderRadius: theme.shape.borderRadius,
     padding: '0 10px',
-    width: '40%'
+    width: '40%',
 }))
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -58,6 +58,9 @@ const NavBar = () => {
                 <Search>
                     <InputBase
                         placeholder='Search...'
+                        sx={{
+                            color: 'black'
+                        }}
                     />
                 </Search>
                 <Icons>
